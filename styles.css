@@ -1,5 +1,3 @@
-/* CSS existente */
-
 body {
     font-family: 'Roboto', sans-serif;
     background: radial-gradient(aqua, #004085);
@@ -58,7 +56,7 @@ form input:focus {
 }
 
 form button {
-    padding: 10px 20px;
+    padding: 15px 20px;
     color: white;
     border: none;
     cursor: pointer;
@@ -82,7 +80,6 @@ li {
     padding: 15px;
     border: 1px solid #ccc;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     border-radius: 8px;
     transition: transform 0.2s;
@@ -106,18 +103,24 @@ li input[type="checkbox"] {
     margin-right: 10px;
 }
 
+li .button-container {
+    display: flex;
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
 li button {
-    padding: 5px 10px;
+    padding: 10px 15px;
+    min-width: 100px; /* Largura mínima para os botões */
+    font-size: 16px;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    display: inline-block;
 }
 
 li .edit-btn {
     background-color: #007bff;
-    margin-right: 10px;
 }
 
 li .edit-btn:hover {

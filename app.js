@@ -21,14 +21,15 @@ function renderProducts(filter = '') {
         li.innerHTML = `
             <input type="checkbox" onchange="toggleCheck(${index}, this)" ${product.checked ? 'checked' : ''}>
             <span id="product-display-${index}" class="${product.checked ? 'checked' : ''}">
-                <strong>${product.name}</strong> - R$${product.price} - Quantidade: ${product.quantity} <br><br>Total: R$${(product.price * product.quantity).toFixed(2)}
+                <strong>${product.name}</strong> - R$${product.price} - Quantidade: ${product.quantity} <br><br>
+                Total: R$${(product.price * product.quantity).toFixed(2)}
             </span>
             <div id="product-edit-${index}" style="display: none;">
                 <input type="text" value="${product.name}" id="name-${index}" />
                 - R$<input type="number" min="0" step="0.01" value="${product.price}" id="price-${index}" />
                 - Quantidade: <input type="number" min="1" value="${product.quantity}" id="quantity-${index}" />
             </div>
-            <div>
+            <div class="button-container">
                 <button class="edit-btn" onclick="toggleEdit(${index}, this)">Editar</button>
                 <button class="remove-btn" onclick="deleteProduct(${index})">Remover</button>
             </div>
