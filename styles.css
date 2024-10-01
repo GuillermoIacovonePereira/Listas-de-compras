@@ -1,0 +1,168 @@
+/* CSS existente */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(aqua, #004085);
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #343a40;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Flexbox para formulário */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha */
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    flex: 1 1 100%; /* Cada item ocupa a largura total */
+    margin-right: 10px;
+    margin-bottom: 10px; /* Espaço entre as linhas */
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+form button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #28a745;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+li.checked {
+    text-decoration: line-through; /* Risca o texto quando marcado */
+    color: gray; /* Tom cinza para itens marcados */
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li label {
+    flex: 1;
+    cursor: pointer;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li button {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+li .edit-btn {
+    background-color: #007bff;
+    margin-right: 10px;
+}
+
+li .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+li .remove-btn {
+    background-color: #dc3545;
+}
+
+li .remove-btn:hover {
+    background-color: #c82333;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#search:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    form input, form button {
+        flex: 1; /* Cada item ocupa espaço igual */
+    }
+
+    form button {
+        flex: none; /* O botão mantém seu tamanho */
+        margin-right: 0; /* Remove margem direita do botão */
+    }
+}
