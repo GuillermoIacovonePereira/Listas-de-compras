@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Compras</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5993/5993337.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>Lista de Compras</title> <!-- Título da página -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5993/5993337.png" type="image/png"> <!-- Ícone da aba -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"> <!-- Container principal para centralizar o conteúdo -->
         <h1>
-            <img src="https://cdn-icons-png.flaticon.com/512/5993/5993337.png" alt="Ícone" class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/5993/5993337.png" alt="Ícone" class="icon"> <!-- Ícone ao lado do título -->
             Lista de Compras
         </h1>
 
-        <input type="text" id="search" placeholder="Buscar Produto..." onkeyup="searchProducts()">
+        <input type="text" id="search" placeholder="Buscar Produto..." onkeyup="searchProducts()"> <!-- Campo de busca com função de pesquisa -->
 
-        <form id="productForm">
-            <input type="text" id="name" placeholder="Nome do Produto" required>
-            <input type="number" id="price" placeholder="Preço" required min="0" step="0.01">
-            <input type="number" id="quantity" placeholder="Quantidade" required min="1">
-            <button type="submit">Adicionar Produto</button>
+        <form id="productForm"> <!-- Formulário para adicionar produtos -->
+            <input type="text" id="name" placeholder="Nome do Produto" required aria-required="true"> <!-- Campo para nome do produto -->
+            <input type="number" id="price" placeholder="Preço" required min="0" step="0.01" aria-required="true"> <!-- Campo para preço -->
+            <input type="number" id="quantity" placeholder="Quantidade" required min="1" aria-required="true"> <!-- Campo para quantidade -->
+            <button type="submit">Adicionar Produto</button> <!-- Botão para enviar o formulário -->
         </form>
-        <p id="errorMessage" class="error-message"></p>
+        
+        <p id="errorMessage" class="error-message"></p> <!-- Mensagem de erro, inicialmente oculta -->
+        
+        <p id="totalDisplay">Total: R$0.00</p> <!-- Exibição do total acumulado -->
 
-        <ul id="productList"></ul>
+        <div id="alert" role="alert"></div> <!-- Balão de alerta, inicialmente oculto -->
+
+        <ul id="productList"></ul> <!-- Lista para exibir os produtos adicionados -->
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>

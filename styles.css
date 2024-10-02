@@ -1,171 +1,217 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background: radial-gradient(aqua, #004085);
-    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Define a fonte do corpo da página */
+    background: radial-gradient(aqua, #004085); /* Define um fundo em gradiente radial */
+    padding: 20px; /* Adiciona espaçamento interno ao corpo */
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    background: rgba(255, 255, 255, 0.9); /* Define um fundo semitransparente */
+    padding: 30px; /* Adiciona espaçamento interno ao container */
+    border-radius: 10px; /* Arredonda as bordas do container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao container */
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #343a40;
+    display: flex; /* Utiliza flexbox para alinhar itens dentro do título */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: center; /* Alinha itens horizontalmente ao centro */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+    text-align: center; /* Centraliza o texto do título */
+    color: #343a40; /* Define a cor do texto do título */
 }
 
 .icon {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+    width: 50px; /* Define a largura do ícone */
+    height: auto; /* Define a altura automaticamente */
+    margin-right: 10px; /* Adiciona espaço à direita do ícone */
 }
 
-/* Flexbox para formulário */
+/* Estilos do balão de alerta */
+#alert {
+    display: none; /* Inicialmente esconde o balão de alerta */
+    background-color: #ffcccc; /* Define a cor de fundo do alerta */
+    color: #d8000c; /* Define a cor do texto do alerta */
+    padding: 10px; /* Adiciona espaçamento interno ao alerta */
+    border: 1px solid #d8000c; /* Define a borda do alerta */
+    border-radius: 5px; /* Arredonda as bordas do alerta */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do alerta */
+    text-align: center; /* Centraliza o texto do alerta */
+}
+
+/* Estilos do formulário */
 form {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha */
-    margin-bottom: 20px;
+    display: flex; /* Utiliza flexbox para layout do formulário */
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha se necessário */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do formulário */
 }
 
 form input, form button {
-    flex: 1 1 100%; /* Cada item ocupa a largura total */
-    margin-right: 10px;
-    margin-bottom: 10px; /* Espaço entre as linhas */
+    flex: 1 1 100%; /* Faz com que os itens ocupem toda a largura disponível */
+    margin-right: 10px; /* Adiciona espaço à direita dos itens */
+    margin-bottom: 10px; /* Adiciona espaço abaixo dos itens */
 }
 
 form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #000;
-    border-radius: 8px;
-    box-sizing: border-box;
+    padding: 10px; /* Adiciona espaçamento interno aos campos de entrada */
+    font-size: 16px; /* Define o tamanho da fonte nos campos de entrada */
+    border: 1px solid #000; /* Define a borda do campo de entrada */
+    border-radius: 8px; /* Arredonda as bordas do campo de entrada */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
 }
 
 form input:focus {
-    outline: none;
-    border: 1px solid #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+    border: 1px solid #007bff; /* Altera a borda para azul ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Adiciona sombra ao focar no campo */
 }
 
 form button {
-    padding: 15px 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #28a745;
-    transition: background-color 0.3s ease;
+    padding: 15px 20px; /* Adiciona espaçamento interno ao botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    border-radius: 8px; /* Arredonda as bordas do botão */
+    background-color: #28a745; /* Define a cor de fundo do botão */
+    transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
 }
 
 form button:hover {
-    background-color: #218838;
+    background-color: #218838; /* Altera a cor de fundo ao passar o mouse sobre o botão */
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+    text-align: center; /* Centraliza o texto da lista */
 }
 
 li {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 8px;
-    transition: transform 0.2s;
+    background-color: #fff; /* Define o fundo branco para os itens da lista */
+    margin: 10px 0; /* Adiciona espaço vertical entre os itens da lista */
+    padding: 15px; /* Adiciona espaçamento interno aos itens da lista */
+    border: 1px solid #ccc; /* Define a borda dos itens da lista */
+    display: flex; /* Utiliza flexbox para layout dos itens da lista */
+    justify-content: space-between; /* Adiciona espaço entre os itens da lista */
+    border-radius: 8px; /* Arredonda as bordas dos itens da lista */
+    transition: transform 0.2s; /* Adiciona transição suave para transformações */
 }
 
 li.checked {
-    text-decoration: line-through; /* Risca o texto quando marcado */
-    color: gray; /* Tom cinza para itens marcados */
+    text-decoration: line-through; /* Risca o texto quando o item está marcado */
+    color: gray; /* Define a cor cinza para itens marcados */
 }
 
 li:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); /* Adiciona efeito de aumento ao passar o mouse sobre o item */
 }
 
 li label {
-    flex: 1;
-    cursor: pointer;
+    flex: 1; /* Faz com que o label ocupe o espaço disponível */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o label */
 }
 
 li input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Adiciona espaço à direita do checkbox */
 }
 
 li .button-container {
-    display: flex;
+    display: flex; /* Utiliza flexbox para layout dos botões */
     flex-direction: column; /* Empilha os botões verticalmente */
-    gap: 20px; /* Espaçamento entre os botões */
+    gap: 20px; /* Adiciona espaço entre os botões */
 }
 
 li button {
-    padding: 10px 15px;
-    min-width: 100px; /* Largura mínima para os botões */
-    font-size: 16px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
+    padding: 10px 15px; /* Adiciona espaçamento interno aos botões */
+    min-width: 100px; /* Define largura mínima para os botões */
+    font-size: 16px; /* Define o tamanho da fonte nos botões */
+    color: white; /* Define a cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre os botões */
+    border-radius: 8px; /* Arredonda as bordas dos botões */
 }
 
 li .edit-btn {
-    background-color: #007bff;
+    background-color: #007bff; /* Define a cor de fundo do botão de edição */
 }
 
 li .edit-btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Altera a cor ao passar o mouse no botão de edição */
 }
 
 li .remove-btn {
-    background-color: #dc3545;
+    background-color: #dc3545; /* Define a cor de fundo do botão de remoção */
 }
 
 li .remove-btn:hover {
-    background-color: #c82333;
+    background-color: #c82333; /* Altera a cor ao passar o mouse no botão de remoção */
+}
+
+#totalDisplay {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do total exibido */
+    font-weight: bold; /* Define o texto como negrito */
+    margin-top: 20px; /* Adiciona espaço acima do total */
 }
 
 #search {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-    border-radius: 8px;
-    box-sizing: border-box;
+    width: 100%; /* Define largura total para o campo de busca */
+    padding: 10px; /* Adiciona espaçamento interno ao campo de busca */
+    font-size: 16px; /* Define o tamanho da fonte no campo de busca */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do campo de busca */
+    border: 1px solid #000; /* Define a borda do campo de busca */
+    border-radius: 8px; /* Arredonda as bordas do campo de busca */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
 }
 
 #search:focus {
-    outline: none;
-    border: 1px solid #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none; /* Remove o contorno padrão ao focar no campo de busca */
+    border: 1px solid #007bff; /* Altera a borda para azul ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Adiciona sombra ao focar no campo de busca */
 }
 
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
+/* Estilos para campos de edição */
+.product-edit {
+    display: flex; /* Utiliza flexbox para layout dos campos de edição */
+    flex-direction: column; /* Coloca os campos de edição em coluna */
+    margin-top: 0px; /* Espaço acima dos campos de edição */
+    text-align: center; /* Centraliza o texto nos campos de edição */
+    align-items: center; /* Alinha itens ao centro */
+    justify-content: center; /* Justifica o conteúdo ao centro */
+}
+
+.product-edit label {
+    margin-bottom: 5px; /* Adiciona espaço abaixo das labels */
+    font-weight: bold; /* Define texto em negrito para as labels */
+    display: flex; /* Utiliza flexbox para layout das labels */
+    text-align: center; /* Centraliza o texto nas labels */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    justify-content: center; /* Justifica o conteúdo ao centro */
+}
+
+.product-edit input {
+    padding: 10px; /* Adiciona espaçamento interno aos campos de edição */
+    font-size: 16px; /* Define o tamanho da fonte nos campos de edição */
+    border: 1px solid #ccc; /* Define a borda dos campos de edição */
+    border-radius: 8px; /* Arredonda as bordas dos campos de edição */
+    margin: 5px 0; /* Adiciona margem vertical entre os campos de edição */
+    width: 50%; /* Define largura dos campos de edição */
+}
+
+.product-edit input:focus {
+    outline: none; /* Remove o contorno padrão ao focar no campo de edição */
+    border: 1px solid #007bff; /* Altera a borda para azul ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Adiciona sombra ao focar no campo de edição */
 }
 
 /* Responsividade */
 @media (min-width: 600px) {
     form input, form button {
-        flex: 1; /* Cada item ocupa espaço igual */
+        flex: 1; /* Cada item ocupa espaço igual em telas maiores */
     }
 
     form button {
-        flex: none; /* O botão mantém seu tamanho */
-        margin-right: 0; /* Remove margem direita do botão */
+        flex: none; /* O botão mantém seu tamanho fixo */
+        margin-right: 0; /* Remove a margem direita do botão em telas maiores */
     }
 }
