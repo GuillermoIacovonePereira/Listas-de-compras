@@ -69,22 +69,72 @@ form input:focus {
 
 form button {
     padding: 15px 20px; /* Adiciona espaçamento interno ao botão */
+    margin-left: auto;
     color: white; /* Define a cor do texto do botão */
     border: none; /* Remove a borda padrão do botão */
     cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
     border-radius: 8px; /* Arredonda as bordas do botão */
     background-color: #28a745; /* Define a cor de fundo do botão */
     transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
+
 }
 
 form button:hover {
     background-color: #218838; /* Altera a cor de fundo ao passar o mouse sobre o botão */
 }
 
+.unitSelect-container {
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinha verticalmente o select e o label */
+    gap: 10px; /* Espaçamento entre o select e o label */
+}
+
+select {
+    width: auto; /* Largura da caixa */
+    padding: 10px;
+    margin-top: -10px;
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estiliza a seta da caixa de seleção (pode ser ajustado ou removido conforme necessário) */
+select::after {
+    content: '▼'; /* Adiciona seta personalizada */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Estiliza as opções dentro do select */
+select option {
+    background-color: #fff; /* Cor de fundo das opções */
+    color: #333; /* Cor do texto das opções */
+    padding: 10px; /* Espaçamento interno nas opções */
+    border: none; /* Remove bordas internas */
+    font-size: 16px; /* Tamanho do texto das opções */
+}
+
+/* Estilo ao passar o mouse sobre o select */
+select:hover {
+    background-color: #e0e0e0;
+}
+
+select:focus {
+    outline: none; /* Remove a linha padrão de foco */
+    border-color: #007bff; /* Cor da borda quando o select está focado */
+}
+
 ul {
     list-style: none; /* Remove os marcadores da lista */
     padding: 0; /* Remove o padding padrão da lista */
     text-align: center; /* Centraliza o texto da lista */
+    align-content: center;
 }
 
 li {
@@ -148,10 +198,25 @@ li .remove-btn:hover {
     background-color: #c82333; /* Altera a cor ao passar o mouse no botão de remoção */
 }
 
+.total-and-button-container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente no centro */
+    margin-bottom: 30px;
+}
+
 #totalDisplay {
     font-size: 1.2em; /* Aumenta o tamanho da fonte do total exibido */
     font-weight: bold; /* Define o texto como negrito */
-    margin-top: 20px; /* Adiciona espaço acima do total */
+}
+
+#clearListButton {
+    background-color: #dc3545; /* Cor de fundo para o botão de limpar */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
 
 #search {

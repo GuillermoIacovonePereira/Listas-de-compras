@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container"> <!-- Container principal para centralizar o conteúdo -->
+    <div class="container"> <!-- Container principal -->
         <h1>
             <img src="https://cdn-icons-png.flaticon.com/512/5993/5993337.png" alt="Ícone" class="icon"> <!-- Ícone ao lado do título -->
             Lista de Compras
@@ -20,13 +20,23 @@
         <form id="productForm"> <!-- Formulário para adicionar produtos -->
             <input type="text" id="name" placeholder="Nome do Produto" required aria-required="true"> <!-- Campo para nome do produto -->
             <input type="number" id="price" placeholder="Preço" required min="0" step="0.01" aria-required="true"> <!-- Campo para preço -->
-            <input type="number" id="quantity" placeholder="Quantidade" required min="1" aria-required="true"> <!-- Campo para quantidade -->
+            <div class="unitSelect-container">
+                <select id="unitSelect">
+                    <option value="unidade">Unidade</option>
+                    <option value="kg">Kg</option>
+                    <option value="gr">Gr</option>
+                </select>
+                <input type="number" id="quantity" placeholder="Quantidade" required min="1" aria-required="true"> <!-- Campo para quantidade -->
+            </div>
             <button type="submit">Adicionar Produto</button> <!-- Botão para enviar o formulário -->
         </form>
         
         <p id="errorMessage" class="error-message"></p> <!-- Mensagem de erro, inicialmente oculta -->
         
-        <p id="totalDisplay">Total: R$0.00</p> <!-- Exibição do total acumulado -->
+        <div class="total-and-button-container">
+            <span id="totalDisplay">Valor Total: R$0,00</span>
+            <button id="clearListButton">Limpar</button>
+        </div>               
 
         <div id="alert" role="alert"></div> <!-- Balão de alerta, inicialmente oculto -->
 
