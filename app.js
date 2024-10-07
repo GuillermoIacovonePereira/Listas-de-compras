@@ -110,7 +110,7 @@ function renderProducts(filter = '') {
                 <select id="unitSelect-${index}">
                     <option value="Unidade" ${product.unit === 'Unidade' ? 'selected' : ''}>Unidade</option>
                     <option value="Kg" ${product.unit === 'Kg' ? 'selected' : ''}>Kg</option>
-                    <option value="Mg" ${product.unit === 'Mg' ? 'selected' : ''}>Mg</option>
+                    <option value="Gr" ${product.unit === 'Gr' ? 'selected' : ''}>Gr</option>
                 </select>
             </div>
             <div class="button-container">
